@@ -29,7 +29,6 @@ source $HOME/Archie/configs/setup.conf
   git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
   cp -R "/home/$USERNAME/zsh/zshrc" "/home/$USERNAME/.zshrc"  
-  cp -R "/home/$USERNAME/Archie/configs/.local/share/*" "/home/$USERNAME/.local/share/"  
 
 sed -n '/'$INSTALL_TYPE'/q;p' ~/Archie/pkg-files/${DESKTOP_ENV}.txt | while read line
 do
@@ -66,7 +65,7 @@ export PATH=$PATH:~/.local/bin
 # Theming DE if user chose FULL installation
 if [[ $INSTALL_TYPE == "FULL" ]]; then
   if [[ $DESKTOP_ENV == "kde" ]]; then
-    cp -R "/home/$USERNAME/Archie/configs/.local/share/*" "/home/$USERNAME/.local/share/"  
+    cp -r ${HOME}/Archie/configs/.local/share/* /home/$USERNAME/.local/share/"
     pipx install konsave
     konsave -i ~/Archie/configs/kde.knsv
     sleep 1
