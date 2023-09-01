@@ -189,16 +189,16 @@ select_option() {
 logo () {
 # This will be shown on every set as user is progressing
 echo -ne "
--------------------------------------------------------------------------
- █████╗ ██████╗  ██████╗██╗  ██╗████████╗██╗████████╗██╗   ██╗███████╗
-██╔══██╗██╔══██╗██╔════╝██║  ██║╚══██╔══╝██║╚══██╔══╝██║   ██║██╔════╝
-███████║██████╔╝██║     ███████║   ██║   ██║   ██║   ██║   ██║███████╗
-██╔══██║██╔══██╗██║     ██╔══██║   ██║   ██║   ██║   ██║   ██║╚════██║
-██║  ██║██║  ██║╚██████╗██║  ██║   ██║   ██║   ██║   ╚██████╔╝███████║
-╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝   ╚═╝    ╚═════╝ ╚══════╝
-------------------------------------------------------------------------
-            Please select presetup settings for your system              
-------------------------------------------------------------------------
+-----------------------------------------------
+   █████╗ ██████╗  ██████╗██╗  ██╗████╗███████╗
+  ██╔══██╗██╔══██╗██╔════╝██║  ██║╚██╔╝██╔════╝
+  ███████║██████╔╝██║     ███████║ ██║ █████╗
+  ██╔══██║██╔══██╗██║     ██╔══██║ ██║ ██╔══╝
+  ██║  ██║██║  ██║╚██████╗██║  ██║████╗███████╗
+  ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═══╝╚══════╝
+-----------------------------------------------
+Please select presetup settings for your system              
+-----------------------------------------------
 "
 }
 # @description This function will handle file systems. At this movement we are handling only
@@ -247,14 +247,14 @@ esac
 # @description Set user's keyboard mapping. 
 keymap () {
 echo -ne "
-Please select key board layout from this list"
+Please select keyboard layout from this list"
 # These are default key maps as presented in official arch repo archinstall
 options=(us by ca cf cz de dk es et fa fi fr gr hu il it lt lv mk nl no pl ro ru sg ua uk)
 
 select_option $? 4 "${options[@]}"
 keymap=${options[$?]}
 
-echo -ne "Your key boards layout: ${keymap} \n"
+echo -ne "Your keyboards layout: ${keymap} \n"
 set_option KEYMAP $keymap
 }
 
@@ -279,11 +279,12 @@ esac
 # @description Disk selection for drive to be used with installation.
 diskpart () {
 echo -ne "
-------------------------------------------------------------------------
-    THIS WILL FORMAT AND DELETE ALL DATA ON THE DISK
-    Please make sure you know what you are doing because
-    after formating your disk there is no way to get data back
-------------------------------------------------------------------------
+-----------------------------------------------
+THIS WILL FORMAT AND DELETE ALL DATA ON THE DISK
+Please make sure you know what you are doing 
+        because after formating your disk 
+        there is no way to get data back
+-----------------------------------------------
 
 "
 
