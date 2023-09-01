@@ -28,7 +28,7 @@ source $HOME/Archie/configs/setup.conf
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-  cp -r "~/zsh/.zshrc" /home/$USERNAME/.zshrc
+  ln -s "~/zsh/.zshrc" /home/$USERNAME/.zshrc
 
 sed -n '/'$INSTALL_TYPE'/q;p' ~/Archie/pkg-files/${DESKTOP_ENV}.txt | while read line
 do
@@ -65,7 +65,7 @@ export PATH=$PATH:~/.local/bin
 # Theming DE if user chose FULL installation
 if [[ $INSTALL_TYPE == "FULL" ]]; then
   if [[ $DESKTOP_ENV == "kde" ]]; then
-    cp -r ~/Archie/configs/.local/share/* ~/.local/share/
+    cp -r ~/Archie/configs/.local/share/* /home/$USERNAME/.local/share/
     pipx install konsave
     konsave -i ~/Archie/configs/kde.knsv
     sleep 1
