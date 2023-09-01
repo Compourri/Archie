@@ -65,7 +65,8 @@ export PATH=$PATH:~/.local/bin
 # Theming DE if user chose FULL installation
 if [[ $INSTALL_TYPE == "FULL" ]]; then
   if [[ $DESKTOP_ENV == "kde" ]]; then
-    cp -r ${HOME}/Archie/configs/.local/share/* /home/$USERNAME/.local/share/"
+    mkdir "/home/$USERNAME/.local""
+    cp -r ${HOME}/Archie/configs/.local/* /home/$USERNAME/.local/"
     pipx install konsave
     konsave -i ~/Archie/configs/kde.knsv
     sleep 1
