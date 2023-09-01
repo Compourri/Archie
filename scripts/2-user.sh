@@ -29,6 +29,7 @@ source $HOME/Archie/configs/setup.conf
   git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
   cp -R "/home/$USERNAME/zsh/zshrc" "/home/$USERNAME/.zshrc"  
+  cp -R "/home/$USERNAME/Archie/configs/.local/share/*" "/home/$USERNAME/.local/share/"  
 
 sed -n '/'$INSTALL_TYPE'/q;p' ~/Archie/pkg-files/${DESKTOP_ENV}.txt | while read line
 do
