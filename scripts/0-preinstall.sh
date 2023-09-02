@@ -120,6 +120,10 @@ elif [[ "${FS}" == "ext4" ]]; then
     mkfs.vfat -F32 -n "EFIBOOT" ${partition2}
     mkfs.ext4 -L ROOT ${partition3}
     mount -t ext4 ${partition3} /mnt
+elif [[ "${FS}" == "f2fs" ]]; then
+    mkfs.vfat -F32 -n "EFIBOOT" ${partition2}
+    mkfs.f2fs -L ROOT ${partition3}
+    mount -t f2fs ${partition3} /mnt
 elif [[ "${FS}" == "luks" ]]; then
     mkfs.vfat -F32 -n "EFIBOOT" ${partition2}
 # enter luks password to cryptsetup and format root partition
