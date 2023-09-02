@@ -2,7 +2,6 @@
 anydesk-bin
 autojump
 brave-bin
-bridge-utils
 droidcam
 dxvk-bin
 freedownloadmanager
@@ -15,5 +14,6 @@ plymouth-git
 portmaster-stub-bin
 rustdesk-bin
 qtscrcpy
+ttf-meslo-nerd-font-powerlevel10k
 tuned
 ventoy-bin

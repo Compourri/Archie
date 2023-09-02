@@ -82,6 +82,8 @@ echo -ne "
           Enabling Essential Services
 -----------------------------------------------
 "
+sudo systemctl enable apparmor
+echo "  AppArmor enabled"
 systemctl enable cronie.service
 echo "  Cron enabled"
 ntpd -qg
@@ -93,8 +95,13 @@ systemctl stop dhcpcd.service
 echo "  DHCP stopped"
 systemctl enable NetworkManager.service
 echo "  NetworkManager enabled"
+sudo systemctl enable nfs-client.target
+echo "  NFS Client enabled"
 systemctl enable avahi-daemon.service
 echo "  Avahi enabled"
+systemctl enable tuned.service
+tuned-adm profile throughput-performance
+echo "  Tuned enabled"
 
 echo -ne "
 -----------------------------------------------

@@ -81,14 +81,13 @@ pipewire
 pipewire-audio
 pkgconf
 pkgfile
-powerline-fonts
 profile-sync-daemon
 python-notify2
 python-psutil
 python-pyqt5
 python-pipx
 qemu
-steam
+steam-native-runtime
 swtpm
 terminus-font
 timeshift
