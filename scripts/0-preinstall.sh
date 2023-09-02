@@ -122,8 +122,8 @@ elif [[ "${FS}" == "ext4" ]]; then
     mount -t ext4 ${partition3} /mnt
 elif [[ "${FS}" == "f2fs" ]]; then
     mkfs.vfat -F32 -n "EFIBOOT" ${partition2}
-    mkfs.f2fs -L ROOT ${partition3}
-    mount -t f2fs ${partition3} /mnt
+    mkfs.f2fs -f -l ROOT -O inode_checksum,sb_checksum ${partition3}
+    mount -t f2fs -o compress_algorithm=zstd:6,compress_chksum,atgc,gc_merge,lazytime ${partition3} /mnt
 elif [[ "${FS}" == "luks" ]]; then
     mkfs.vfat -F32 -n "EFIBOOT" ${partition2}
 # enter luks password to cryptsetup and format root partition
