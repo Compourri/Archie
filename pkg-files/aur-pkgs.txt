@@ -9,6 +9,6 @@ lightly-git
 lightlyshaders-git
 nerd-fonts-fira-code
 ocs-url
-plymouth-git
+#plymouth-git
 ttf-meslo
 #vde2
