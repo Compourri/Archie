@@ -207,17 +207,18 @@ filesystem () {
 echo -ne "
 Please Select your file system for both boot and root
 "
-options=("btrfs" "ext4" "luks" "exit")
+options=("btrfs" "ext4" "f2fs" "luks" "exit")
 select_option $? 1 "${options[@]}"
 
 case $? in
 0) set_option FS btrfs;;
 1) set_option FS ext4;;
-2) 
+2) set_option FS f2fs;;
+3) 
     set_password "LUKS_PASSWORD"
     set_option FS luks
     ;;
-3) exit ;;
+4) exit ;;
 *) echo "Wrong option please select again"; filesystem;;
 esac
 }
@@ -237,7 +238,7 @@ case ${options[$?]} in
     echo "${time_zone} set as timezone"
     set_option TIMEZONE $time_zone;;
     n|N|no|NO|No)
-    echo "Please enter your desired timezone e.g. Europe/London :" 
+    echo "Please enter your desired timezone e.g. Africa/Johannesburg :" 
     read new_timezone
     echo "${new_timezone} set as timezone"
     set_option TIMEZONE $new_timezone;;
@@ -281,7 +282,7 @@ diskpart () {
 echo -ne "
 -----------------------------------------------
 THIS WILL FORMAT AND DELETE ALL DATA ON THE DISK
-Please make sure you know what you are doing 
+    Please make sure you know what you are doing 
         because after formating your disk 
         there is no way to get data back
 -----------------------------------------------
