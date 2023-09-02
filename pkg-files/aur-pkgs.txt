@@ -10,12 +10,10 @@ github-desktop-bin
 lightly-git
 lightlyshaders-git
 mailspring
-nerd-fonts-fira-code
 ocs-url
 plymouth-git
 portmaster-stub-bin
 rustdesk-bin
 qtscrcpy
-ttf-meslo
 tuned
 ventoy-bin
