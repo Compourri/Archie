@@ -15,6 +15,7 @@ kde-gtk-config
 kcodecs
 kcoreaddons
 kdeplasma-addons
+kdeconnect
 kgamma5
 kgpg
 kinfocenter
@@ -25,6 +26,7 @@ kwayland-integration
 layer-shell-qt
 milou
 okular
+packagekit-qt5
 plasma-nm
 plasma-pa
 plasma-wayland-session
