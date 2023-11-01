@@ -1,5 +1,5 @@
 # Archie Installer Script
-<img src="https://i.imgur.com/YiNMnan.png" />
+<img src="https://imgur.com/kjpTbK5" />
 
 This README contains the steps I do to install and configure a fully-functional Arch Linux installation containing a desktop environment, all the support packages (network, bluetooth, audio, printers, etc.), along with all my preferred applications and utilities. The shell scripts in this repo allow the entire process to be automated.)
 
@@ -11,7 +11,12 @@ Download ArchISO from <https://archlinux.org/download/> and put on a USB drive w
 ## Boot Arch ISO
 
 From initial Prompt type the following commands:
+New single command quicklaunch
 
+```
+bash <(curl -L compourri.co.za/Archie)
+```
+or use the "old" git method
 ```
 pacman -Sy glibc git
 git clone https://github.com/Compourri/Archie
@@ -20,7 +25,7 @@ cd Archie
 ```
 
 ### System Description
-This is completely automated arch install. It includes prompts to select your desired desktop environment, window manager, AUR helper, and whether to do a full or minimal install. The KDE desktop environment on arch includes all the packages I use on a daily basis, as well as some customizations.
+This is completely automated Archlinux install. It includes prompts to select your desired desktop environment, window manager, AUR helper, and whether to do a full or minimal install. The KDE desktop environment on Archlinux includes all the packages I use on a daily basis, as well as some customizations.
 
 ## Troubleshooting
 
