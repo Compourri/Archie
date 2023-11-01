@@ -61,7 +61,6 @@ haveged
 htop
 inetutils
 ipset
-jdk-openjdk
 libdvdcss
 libtool
 lsof

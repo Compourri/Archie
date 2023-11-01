@@ -1,19 +1,20 @@
+
+plymouth-git
+lightly-git
+lightlyshaders-git
+ttf-meslo-nerd-font-powerlevel10k
+tuned
 --END OF MINIMAL INSTALL--
 anydesk-bin
 autojump
-brave-bin
+thorium-browser-bin
 droidcam
 dxvk-bin
 freedownloadmanager
 github-desktop-bin
-lightly-git
-lightlyshaders-git
 mailspring
 ocs-url
-plymouth-git
 portmaster-stub-bin
 rustdesk-bin
 qtscrcpy
-ttf-meslo-nerd-font-powerlevel10k
-tuned
 ventoy-bin
