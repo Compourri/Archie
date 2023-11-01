@@ -17,6 +17,6 @@ git clone https://github.com/Compourri/Archie
 
 echo "Executing Archie Script"
 
-cd $HOME/Archie
+cd Archie/
 
 exec ./Archie.sh
